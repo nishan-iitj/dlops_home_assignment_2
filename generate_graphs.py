@@ -41,7 +41,10 @@ if __name__=="__main__":
     random_values = np.array([-3.5, -1.2, 0, 2.8, -4.1, 1.5, -0.7, 3.2, -2.4, 4.6])
 
     fig, axs = plt.subplots(2, 2, figsize=(12, 8))
-
+    
+    plot_activation_function(random_values, "ReLU", subplot=axs[0, 1])
+    plot_activation_function(random_values, "Leaky ReLU", subplot=axs[1, 0])
+    plot_activation_function(random_values, "Tanh", subplot=axs[1, 1])
 
     plt.tight_layout()
     plt.show()
